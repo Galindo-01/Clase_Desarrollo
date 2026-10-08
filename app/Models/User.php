@@ -29,7 +29,7 @@ class User extends Authenticatable
         // debemos importar el Posts (use App\Models\Post)
         return $this->hasMany(Post::class);
     }
-
+    
     /**
      * The attributes that should be hidden for serialization.
      *

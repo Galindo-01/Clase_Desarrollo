@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Iluminate\DataBase\Eloquent\HasFactory;
 use App\Models\Post;
 
 class Comment extends Model

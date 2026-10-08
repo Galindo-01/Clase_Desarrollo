@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\FlightController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,5 +20,7 @@ Route::get('/enlace', function(){
 })->name('enlace');
 
 Route::get('/flights', [FlightController::class, 'index'])->name('flights.index');
+
+Route::get('/post', [PostController::class, 'index'])->name('post.index');
 
 
