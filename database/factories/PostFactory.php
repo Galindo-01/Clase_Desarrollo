@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +19,11 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title'=> $this->faker->sentence(7),
+            'body'=>$this->faker->text(),
+            'user_id'=> User::factory(),
+            'status'=> $this->faker->randomElement(
+                ['draft', 'published']),
         ];
     }
 }

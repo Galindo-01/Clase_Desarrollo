@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->enum('category', ['comida', 'electronica', 'hogar'])->default('comida');
+            $table->string('description');
+            $table->decimal('price', 8, 2);
+
             $table->timestamps();
         });
     }
